@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Popular" id="gTV-IL-0wX" customClass="PopularCell" customModule="MovieFlix" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="530" height="262"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="530" height="262"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvf-JJ-imr">
+                        <rect key="frame" x="12" y="12" width="506" height="250"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nssl0033" translatesAutoresizingMaskIntoConstraints="NO" id="D4O-tb-U8T">
+                                <rect key="frame" x="0.0" y="0.0" width="506" height="250"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rcU-ls-94F">
+                                <rect key="frame" x="471" y="10" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="Byd-BN-cAp"/>
+                                    <constraint firstAttribute="height" constant="25" id="oA7-zv-rFy"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="delete"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapDeleteButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="YLe-09-goo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="D4O-tb-U8T" secondAttribute="trailing" id="MKu-EI-Y9U"/>
+                            <constraint firstAttribute="trailing" secondItem="rcU-ls-94F" secondAttribute="trailing" constant="10" id="UWZ-cf-oVI"/>
+                            <constraint firstItem="D4O-tb-U8T" firstAttribute="top" secondItem="fvf-JJ-imr" secondAttribute="top" id="ZcR-ET-jNx"/>
+                            <constraint firstItem="D4O-tb-U8T" firstAttribute="leading" secondItem="fvf-JJ-imr" secondAttribute="leading" id="hzP-cq-sPT"/>
+                            <constraint firstAttribute="bottom" secondItem="D4O-tb-U8T" secondAttribute="bottom" id="iuS-Rg-Hr9"/>
+                            <constraint firstItem="rcU-ls-94F" firstAttribute="top" secondItem="fvf-JJ-imr" secondAttribute="top" constant="10" id="vZE-Do-vCX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fvf-JJ-imr" secondAttribute="bottom" id="VJU-Mt-Aoq"/>
+                <constraint firstItem="fvf-JJ-imr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="rwq-36-ALT"/>
+                <constraint firstAttribute="trailing" secondItem="fvf-JJ-imr" secondAttribute="trailing" constant="12" id="sos-ts-uNN"/>
+                <constraint firstItem="fvf-JJ-imr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="xiL-me-c6G"/>
+            </constraints>
+            <size key="customSize" width="530" height="262"/>
+            <connections>
+                <outlet property="backdropImageView" destination="D4O-tb-U8T" id="l0G-Uh-ooh"/>
+                <outlet property="deleteButton" destination="rcU-ls-94F" id="osP-Ex-a29"/>
+            </connections>
+            <point key="canvasLocation" x="189.85507246376812" y="97.098214285714278"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="delete" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="nssl0033" width="1024" height="768"/>
+    </resources>
+</document>
